@@ -68,7 +68,7 @@ margin_top = 489.0
 margin_right = 388.0
 margin_bottom = 645.0
 custom_fonts/normal_font = ExtResource( 1 )
-text = "Numbers can also wrap round right to left - the way that you're reading this right now."
+text = "Numbers can also continue on the next line - the way that you're reading this right now."
 fit_content_height = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="Background/ScrollContainer/MarginContainer/VBoxContainer"]
