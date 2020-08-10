@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://themes/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/Number.gd" type="Script" id=2]
+
+[node name="Number" type="RichTextLabel"]
+margin_right = 40.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 40, 76 )
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

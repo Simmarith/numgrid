@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://fonts/montreal/Montreal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://themes/assets/normal_box.tres" type="StyleBox" id=2]
+[ext_resource path="res://themes/assets/hover_box.tres" type="StyleBox" id=3]
+[ext_resource path="res://themes/assets/pressed_box.tres" type="StyleBox" id=4]
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0.9, 0.9, 0.9, 1 )
+Button/colors/font_color_disabled = Color( 0.2, 0.2, 0.2, 1 )
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+Button/colors/font_color_pressed = Color( 0.701961, 0.701961, 0.901961, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = ExtResource( 1 )
+Button/styles/disabled = ExtResource( 4 )
+Button/styles/focus = null
+Button/styles/hover = ExtResource( 3 )
+Button/styles/normal = ExtResource( 2 )
+Button/styles/pressed = ExtResource( 4 )
+Label/colors/font_color = Color( 0.9, 0.9, 0.9, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+Panel/styles/panel = ExtResource( 2 )
+PanelContainer/styles/panel = ExtResource( 2 )
