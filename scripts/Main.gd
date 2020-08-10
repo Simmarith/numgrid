@@ -4,6 +4,7 @@ extends Container
 const WIDTH = 9
 const CHAR_WIDTH = 50
 const CHAR_HEIGHT = 76
+const INITIAL_ROWS = 9
 const NUMBER_SCENE = preload("res://scenes/Number.tscn")
 const ROW_SCENE = preload("res://scenes/Row.tscn")
 
@@ -18,7 +19,7 @@ var focused = []
 func _ready():
 	randomize()
 # warning-ignore:unused_variable
-	for n in range(12):
+	for n in range(INITIAL_ROWS):
 		rows.append(generate_row())
 	update_rows()
 	pass # Replace with function body.
