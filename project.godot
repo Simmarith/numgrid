@@ -19,6 +19,10 @@ config/name="numgrid"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://assets/icon.png"
 
+[autoload]
+
+Score="*res://scripts/Score.gd"
+
 [display]
 
 window/size/width=450

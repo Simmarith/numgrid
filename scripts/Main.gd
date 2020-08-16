@@ -1,6 +1,6 @@
 extends Container
 
-# Number of numbers per line
+# Number of numbers per row
 const WIDTH = 9
 const CHAR_WIDTH = 50
 const CHAR_HEIGHT = 76
@@ -22,6 +22,8 @@ func _ready():
 	for n in range(INITIAL_ROWS):
 		rows.append(generate_row())
 	update_rows()
+	Score.total_rows = INITIAL_ROWS
+	Score.total_numbers = INITIAL_ROWS * WIDTH
 	pass # Replace with function body.
 
 func generate_row():
@@ -36,6 +38,8 @@ func generate_row():
 		row_node.add_child(number)
 	self.add_child(row_node)
 	row_nodes.append(row_node)
+	Score.total_rows += 1
+	Score.total_numbers += WIDTH
 	return row
 	
 func update_rows():
@@ -103,6 +107,7 @@ func check_delete_row():
 		if should_delete:
 			deletable_rows.append(n)
 			row_nodes[n].queue_free()
+			Score.cleared_rows += 1
 	var new_rows = []
 	var new_row_nodes = []
 	for n in range(rows.size()):
@@ -123,6 +128,7 @@ func register_focus(row : int, col: int):
 		if check_match():
 			rows[focused[0][0]][focused[0][1]].disabled = true
 			rows[focused[1][0]][focused[1][1]].disabled = true
+			Score.cleared_numbers += 2
 		focused.clear()
 		clear_focused()
 		check_delete_row()
@@ -134,7 +140,6 @@ func register_unfocus(row : int, col: int):
 
 
 func _on_AddRows_pressed():
-	print_debug("PRESSED!")
 # warning-ignore:unused_variable
 	for n in range(3):
 		rows.append(generate_row())
